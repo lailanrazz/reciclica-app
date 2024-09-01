@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';  // Impor Router untuk navigasi
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -16,5 +16,4 @@ export class RegisterPage implements OnInit {
   register() {
     this.router.navigate(['home']);
   }
-
 }

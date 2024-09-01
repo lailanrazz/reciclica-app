@@ -1,8 +1,8 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { RegisterPage } from './register.page';
-import { Router } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 import { AppRoutingModule } from 'src/app/app-routing.module';
+import { Router } from '@angular/router';
 
 describe('RegisterPage', () => {
   let component: RegisterPage;
@@ -22,14 +22,13 @@ describe('RegisterPage', () => {
     router = TestBed.get(Router);
 
     component = fixture.componentInstance;
-
   }));
 
   it('should go to home page on register', () => {
     spyOn(router, 'navigate');
+
     component.register();
+
     expect(router.navigate).toHaveBeenCalledWith(['home']);
-  })
-
+  });
 });
-

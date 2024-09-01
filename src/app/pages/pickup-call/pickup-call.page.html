@@ -1,29 +1,29 @@
 <ion-header>
-  <ion-toolbar color="success">
+  <ion-toolbar color="success" style="color: white;">
     <ion-buttons slot="start">
       <ion-back-button text=""></ion-back-button>
     </ion-buttons>
-    <ion-title>Pickup call</ion-title>
+    <ion-title>Pickup Call</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <img src="https://awsimages.detik.net.id/visual/2023/09/06/google-maps-ktt-asean_169.png?w=650"/>
+  <img
+    src="https://i0.wp.com/henimurhana.com/wp-content/uploads/2015/08/Yogyakarta-to-Surabaya-East-Java-Google-Maps.jpg?w=828&ssl=1" />
   <ion-card>
     <ion-card-content>
-      <p>Address: Soegondo street</p>
-      <p>Complement: 12</p>
-      <p>Neighborhood: neighborhood</p>
-      <p>Zip code: 55851</p>
-      <p>City name: city</p>
-      <p>State: state</p>
-    </ion-card-content>
+      <p>Address: Jalan Sagan Timur No. 111</p>
+      <p>Complement: Apto 222</p>
+      <p>Neighborhood: Sagan</p>
+      <p>Zip code: 55223</p>
+      <p>Yogyakarta - DI Yogyakarta</p>
+  </ion-card-content>
   </ion-card>
+
   <ion-list>
     <ion-item lines="inset">
-      <ion-label position="floating">Notes</ion-label>
-      <ion-textarea></ion-textarea>
+      <ion-input label="Notes" labelPlacement="floating" type="text"></ion-input>
     </ion-item>
   </ion-list>
-  <ion-button color="success"size="full" (click)="newToPickupCall()">Create pick up call</ion-button>
+  <ion-button size="full" color="success" (click)="newPickupCall()">Create Pickup Call</ion-button>
 </ion-content>

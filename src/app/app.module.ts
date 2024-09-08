@@ -15,11 +15,11 @@ import { environment } from 'src/environments/environment';
 @NgModule({
   declarations: [AppComponent, LoadingComponent],
   imports: [
-    BrowserModule, 
-    IonicModule.forRoot(), 
-    AngularFireModule.initializeApp(environment.firebaseConfig), 
-    AppRoutingModule, 
-    ...AppStoreModule, 
+    BrowserModule,
+    IonicModule.forRoot(),
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AppRoutingModule,
+    ...AppStoreModule,
     StoreDevtoolsModule.instrument({maxAge: 25})],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],

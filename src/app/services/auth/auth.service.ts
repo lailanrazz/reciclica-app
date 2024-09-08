@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { User } from 'src/app/model/user/User';
+import { UserRegister } from 'src/app/model/user/UserRegister';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 
 @Injectable({
@@ -22,8 +22,8 @@ export class AuthService {
     })
   }
 
-  login(email: string, password: string): Observable<User> {
-    return new Observable<User>(observer => {
+  login(email: string, password: string): Observable<UserRegister> {
+    return new Observable<UserRegister>(observer => {
       this.auth.setPersistence('local').then(() => {
         return this.auth.signInWithEmailAndPassword(email, password);
       }).then((userCredential) => {

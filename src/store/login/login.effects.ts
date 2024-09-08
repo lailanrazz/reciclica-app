@@ -4,7 +4,7 @@ import { login, loginFail, loginSuccess, recoverPassword, recoverPasswordFail, r
 import { AuthService } from "src/app/services/auth/auth.service";
 import { catchError, map, switchMap } from "rxjs/operators";
 import { of } from "rxjs";
-import { User } from "src/app/model/user/User";
+import { User } from "src/app/model/user/UserRegister";
 
 @Injectable()
 export class LoginEffects {

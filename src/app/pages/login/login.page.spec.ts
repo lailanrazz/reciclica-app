@@ -10,7 +10,7 @@ import { loadingReducer } from 'src/store/loading/loading.reducers';
 import { loginReducer } from 'src/store/login/login.reducers';
 import { AppState } from 'src/store/AppState';
 import { login, loginFail, loginSuccess, recoverPassword, recoverPasswordFail, recoverPasswordSuccess } from 'src/store/login/login.actions';
-import { User } from 'src/app/model/user/User';
+import { User } from 'src/app/model/user/UserRegister';
 import { AngularFireModule } from '@angular/fire/compat';
 import { environment } from 'src/environments/environment.prod';
 

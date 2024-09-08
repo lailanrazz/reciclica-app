@@ -1,5 +1,5 @@
 import { createAction, props } from "@ngrx/store";
-import { User } from "src/app/model/user/User";
+import { User } from "src/app/model/user/UserRegister";
 
 export const recoverPassword = createAction("[Recover password]", props<{email: string}>());
 export const recoverPasswordSuccess = createAction("[Recover password] success");

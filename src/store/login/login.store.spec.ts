@@ -1,4 +1,4 @@
-import { User } from "src/app/model/user/User"
+import { User } from "src/app/model/user/UserRegister"
 import { AppInitialState } from "../AppInitialState"
 import { login, loginFail, loginSuccess, recoverPassword, recoverPasswordFail, recoverPasswordSuccess } from "./login.actions"
 import { loginReducer } from "./login.reducers"

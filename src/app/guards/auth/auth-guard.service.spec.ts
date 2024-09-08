@@ -1,7 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 import { Store, StoreModule } from '@ngrx/store';
 import { Router, RouterModule } from '@angular/router'; // Import Router and RouterModule
-import { User } from 'src/app/model/user/User';
+import { UserRegister} from 'src/app/model/user/UserRegister';
 import { loginReducer } from 'src/store/login/login.reducers';
 import { AuthGuard } from './auth-guard.service';
 import { loginSuccess } from 'src/store/login/login.actions'; // Import the loginSuccess action
@@ -27,7 +27,7 @@ describe('AuthGuardService', () => {
   });
 
   it('should allow logged user to access page', () => {
-    store.dispatch(loginSuccess({ user: new User() })); // Dispatch loginSuccess action
+    store.dispatch(loginSuccess({ user: new UserRegister() })); // Dispatch loginSuccess action
     service.canLoad().subscribe(isAllowed => {
       expect(isAllowed).toBeTruthy();
     });
@@ -39,11 +39,11 @@ describe('AuthGuardService', () => {
     });
   });
 
-  it('should redirect unauthenticated user to the login page', () => {
+  it ('should not allowed user be sent to the login page', () => {
     spyOn(router, 'navigateByUrl');
 
     service.canLoad().subscribe(() => {
       expect(router.navigateByUrl).toHaveBeenCalledWith('login');
-    });
-  });
-});
+    })
+  })
+})

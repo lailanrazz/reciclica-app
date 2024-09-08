@@ -1,8 +1,8 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
-import { RegisterPage } from './register.page';
 import { IonicModule, ToastController } from '@ionic/angular';
-import { AppRoutingModule } from 'src/app/app-routing.module';
+import { RegisterPage } from './register.page';
 import { Router } from '@angular/router';
+import { AppRoutingModule } from 'src/app/app-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RegisterPageModule } from './register.module';
 import { AppState } from 'src/store/AppState';
@@ -13,6 +13,8 @@ import { register, registerFail, registerSuccess } from 'src/store/register/regi
 import { state } from '@angular/animations';
 import { registerReducer } from 'src/store/register/register.reducers';
 import { loginReducer } from 'src/store/login/login.reducers';
+
+
 describe('RegisterPage', () => {
   let component: RegisterPage;
   let fixture: ComponentFixture<RegisterPage>;
@@ -33,7 +35,6 @@ describe('RegisterPage', () => {
         StoreModule.forFeature("loading", loadingReducer),
         StoreModule.forFeature("login", loginReducer),
         StoreModule.forFeature("register", registerReducer),
-        AppRoutingModule
       ]
     }).compileComponents();
 
@@ -43,7 +44,7 @@ describe('RegisterPage', () => {
     toastController = TestBed.get(ToastController);
 
     component = fixture.componentInstance;
-    page = fixture.debugElement.nativeElement as HTMLElement;
+    page = fixture.debugElement.nativeElement as HTMLElement; 
   }));
 
   it('should create register form on page init', () => {
@@ -142,3 +143,4 @@ describe('RegisterPage', () => {
     component.registerForm.getForm().get('address')?.get('city')?.setValue('any city');
   }
 });
+

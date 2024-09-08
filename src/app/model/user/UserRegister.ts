@@ -1,4 +1,4 @@
-import { Address } from "../adress/Adress";
+import { Address } from "../address/Address";
 
 export class UserRegister {
     name!: string;
@@ -7,4 +7,5 @@ export class UserRegister {
     phone!: string;
 
     address!: Address;
+
 }

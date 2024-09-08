@@ -5,6 +5,7 @@ import { AuthService } from 'src/app/services/auth/auth.service';
 import { RegisterEffects } from "./register.effects";
 import { Observable, of, throwError } from "rxjs";
 import { provideMockActions } from "@ngrx/effects/testing";
+import { User } from "src/app/model/user/User";
 import { UserRegister } from "src/app/model/user/UserRegister";
 import { register, registerSuccess, registerFail } from "./register.actions";
 
@@ -12,7 +13,7 @@ describe("Register Effects", () => {
     let effects: RegisterEffects;
     let actions$: Observable<Action>;
     let error = {error: 'error'};
-    let user = new UserRegister();
+    let user = new User();
     user.id = "anyUserId"
 
     let authServiceMock = {
@@ -43,7 +44,7 @@ describe("Register Effects", () => {
     })
 
     it('should register return success', (done) => {
-        actions$ = of(register({userRegister: new UserRegister()}));
+        actions$ = of(register({userRegister: new UserRegister()})); 
 
         effects.register$.subscribe(newAction => {
             expect(newAction).toEqual(registerSuccess());
@@ -55,7 +56,7 @@ describe("Register Effects", () => {
         const userRegister= new UserRegister();
         userRegister.email = 'error@gmail.com';
 
-        actions$ = of(register({userRegister}));
+        actions$ = of(register({userRegister})); 
 
         effects.register$.subscribe(newAction => {
             expect(newAction).toEqual(registerFail(error));

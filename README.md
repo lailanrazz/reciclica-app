@@ -1,4 +1,4 @@
 # Reciclica-app
 <p>Tugas Praktikum Pemrograman Geospasial Perangkat Bergerak Lanjut</p>
-<p>Nama: Salsabila Eka Fadila</p>
-<p>NIM: 22/494469/SV/20836</p>
+<p>Nama: Laila Nur Azizah</p>
+<p>NIM: 22/500377/SV/21411</p>
